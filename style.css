@@ -1,0 +1,190 @@
+/* RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+/* FONTS */
+/* FONT-WEIGHT:400 */
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/Vazir-WOL.ttf") format("ttf");
+}
+/* FONT-WEIGHT:500 */
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/Vazirmatn-Medium.ttf") format("ttf");
+}
+/* FONT-WEIGHT:600 */
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/Vazirmatn-SemiBold.ttf") format("ttf");
+}
+/* FONT-WEIGHT:700 */
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/Vazirmatn-Bold.ttf") format("ttf");
+}
+/* FONT-WEIGHT:900 */
+@font-face {
+  font-family: "vazir";
+  src: url("./assets/fonts/Vazirmatn-Black.ttf") format("ttf");
+}
+body {
+  font-family: "vazir";
+}
+/* VARIABLE */
+:root {
+  --border-radius: 6px;
+  --border-radius-btn: 8px;
+  --text-color-primary: #1e1e1e;
+  --text-color-secondary: #696969;
+  --text-color-tertiary: #234894;
+  --color-btn: #ffffff;
+  --background-btn: #219f95;
+  --background-span: #afcedd;
+  --font-size-title: 2.2rem;
+  --font-size-primary: 1.6rem;
+  --font-size-secondary: 1.2rem;
+  --font-size-tertiary: 1.8rem;
+  --font-weight-prymary: 900;
+  --font-weight-secondary: 400;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 120px 1fr;
+  padding: 2rem;
+}
+.title {
+  margin: 1.5rem 1.5rem 3rem 0;
+}
+.title h3 {
+  font-size: var(--font-size-title);
+  color: var(--text-color-primary);
+  font-weight: var(--font-weight-prymary);
+}
+
+/* REQUESTS CARD */
+
+.requests {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 0.5rem;
+  align-content: start;
+  row-gap: 2rem;
+  column-gap: 3rem;
+}
+.requests-item {
+  /* border: 1px solid #1e1e1e; */
+}
+
+/* REQUESTS ITEM */
+
+.Documentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+.requests-date p,
+.request-id p {
+  font-weight: var(--font-weight-secondary);
+  color: var(--text-color-secondary);
+  font-size: var(--font-size-secondary);
+}
+.requests-Documentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Documentation-title {
+  font-size: var(--font-size-primary);
+  margin-right: 1rem;
+  font-weight: 600;
+}
+.Documentation-number {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-tertiary);
+  background-color: var(--background-span);
+}
+.Documentation-shared {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-tertiary);
+}
+.request-details {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+}
+.request-type {
+  font-size: var(--font-size-tertiary);
+  font-weight: var(--font-weight-prymary);
+  color: var(--text-color-primary);
+}
+.request-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 0.5rem;
+}
+.request-id p {
+  margin-left: 0.5rem;
+}
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 2rem 1.5rem;
+}
+.personal-information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.information-name {
+  font-size: var(--font-size-primary);
+  font-weight: 700;
+  color: var(--text-color-primary);
+  margin-right: 1rem;
+}
+.information-img {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+}
+.information-request-btn {
+  width: 150px;
+  height: 64px;
+  border-radius: var(--border-radius-btn);
+  background-color: var(--background-btn);
+  border: none;
+  font-size: var(--font-size-primary);
+  font-weight: 500;
+  color: var(--color-btn);
+}
+@media screen and (min-width: 768px) {
+  .requests {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .requests {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
